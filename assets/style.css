@@ -561,3 +561,102 @@ linear-gradient(180deg,#fbfefd 0%,#f4faf8 100%)}
   .auth-signup{height:40px!important}
   .admin-entry-panel{display:block}
 }
+
+/* ===== V5 FULL I18N / LANGUAGE UI ===== */
+.language-switcher{
+  position:relative!important;
+  display:block!important;
+  flex:0 0 auto!important;
+  z-index:1500!important;
+  margin:0!important;
+}
+.lang-current{
+  border:0!important;
+  outline:0!important;
+  background:#fff!important;
+  color:#253140!important;
+  min-width:118px!important;
+  height:46px!important;
+  padding:0 14px!important;
+  border-radius:11px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  font-size:13px!important;
+  font-weight:800!important;
+  cursor:pointer!important;
+  box-shadow:0 3px 14px rgba(16,24,40,.08)!important;
+}
+.lang-current:hover{background:#f7faf9!important}
+.lang-flag{font-size:18px;line-height:1}
+.lang-arrow{font-size:10px;color:#667085}
+.lang-menu{
+  display:none!important;
+  position:absolute!important;
+  right:0!important;
+  top:54px!important;
+  width:168px!important;
+  padding:7px!important;
+  background:#fff!important;
+  border:0!important;
+  border-radius:12px!important;
+  box-shadow:0 18px 45px rgba(16,24,40,.16)!important;
+  z-index:2000!important;
+}
+.language-switcher.open .lang-menu{display:block!important}
+.lang-menu button{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  width:100%!important;
+  border:0!important;
+  background:transparent!important;
+  color:#253140!important;
+  padding:10px 11px!important;
+  border-radius:8px!important;
+  font-size:13px!important;
+  cursor:pointer!important;
+  text-align:left!important;
+}
+.lang-menu button span{font-size:18px}
+.lang-menu button:hover{background:#f2f7f5!important;color:#007f75!important}
+
+/* Requested per-language fonts */
+html[lang="vi"] body,
+html[lang="vi"] button,
+html[lang="vi"] input,
+html[lang="vi"] select,
+html[lang="vi"] textarea{
+  font-family:"Times New Roman", Times, serif!important;
+}
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] button,
+html[lang="zh-CN"] input,
+html[lang="zh-CN"] select,
+html[lang="zh-CN"] textarea{
+  font-family:"Yu Gothic UI Light","Yu Gothic UI","Microsoft YaHei UI",sans-serif!important;
+}
+html[lang="en"] body,
+html[lang="en"] button,
+html[lang="en"] input,
+html[lang="en"] select,
+html[lang="en"] textarea{
+  font-family:Inter,Arial,sans-serif!important;
+}
+
+/* Long translated nav/copy should remain usable */
+html[lang="vi"] .main-nav{gap:16px!important}
+html[lang="en"] .main-nav{gap:17px!important}
+html[lang="zh-CN"] .main-nav{gap:20px!important}
+html[lang="vi"] .main-nav a,
+html[lang="en"] .main-nav a{font-size:13px!important}
+html[lang="vi"] .hero-title-single,
+html[lang="en"] .hero-title-single,
+html[lang="zh-CN"] .hero-title-single{
+  white-space:normal!important;
+  line-height:1.14!important;
+}
+@media(max-width:900px){
+  .lang-current{height:42px!important;min-width:105px!important}
+}
