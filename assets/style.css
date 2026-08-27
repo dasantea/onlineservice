@@ -514,3 +514,50 @@ linear-gradient(180deg,#fbfefd 0%,#f4faf8 100%)}
 .demo-hidden{display:none!important}
 .demo-toast{position:fixed;right:24px;bottom:24px;background:#0b1720;color:#fff;padding:13px 17px;border-radius:12px;z-index:3000;box-shadow:0 16px 35px rgba(0,0,0,.18);font-size:13px}
 @media(max-width:900px){.demo-grid{grid-template-columns:1fr}.demo-side{position:static}.demo-form,.demo-role-cards,.demo-compare{grid-template-columns:1fr}.demo-kpis{grid-template-columns:1fr 1fr}.demo-flow{grid-template-columns:1fr 1fr}}
+
+/* ===== V4.1 AUTH + ADMIN ENTRY ===== */
+.auth-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex:0 0 auto;
+}
+.auth-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:44px;
+  padding:0 13px;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:800;
+  text-decoration:none;
+}
+.auth-login{
+  color:#344054;
+  background:transparent;
+}
+.auth-login:hover{background:#f3f6f5}
+.auth-signup{
+  background:#00877b;
+  color:#fff!important;
+}
+.auth-signup:hover{background:#007268}
+.admin-entry-panel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+@media(max-width:1100px){
+  .auth-actions{gap:3px}
+  .auth-actions a{padding:0 8px}
+}
+@media(max-width:900px){
+  .auth-actions{
+    margin-left:auto;
+  }
+  .auth-login{display:none!important}
+  .auth-signup{height:40px!important}
+  .admin-entry-panel{display:block}
+}

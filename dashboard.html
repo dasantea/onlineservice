@@ -1,8 +1,14 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>대시보드 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=34"></head>
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>대시보드 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=41"></head>
 <body class="dash-bg"><header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a>
     <nav class="main-nav"><a href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta active" href="dashboard.html">대시보드</a></nav>
+    
+    <div class="auth-actions">
+      <a class="auth-login" href="account.html">로그인</a>
+      <a class="auth-signup" href="account.html#signup">회원가입</a>
+    </div>
+    
     <div class="language-switcher">
       <button class="lang-current" type="button" aria-label="Select language">
         <span class="lang-globe">🌐</span><span id="currentLangLabel">한국어</span><span class="lang-arrow">▾</span>
@@ -21,4 +27,20 @@
 <div class="kpi-grid"><div class="kpi"><span>신규 견적요청</span><strong>24</strong><small>지난주 대비 +18%</small></div><div class="kpi"><span>진행중 작업</span><strong>8</strong><small>납기 임박 2건</small></div><div class="kpi"><span>이번 달 거래액</span><strong>₫286M</strong><small>지난달 대비 +9%</small></div><div class="kpi"><span>평균 평점</span><strong>4.9</strong><small>리뷰 73개</small></div></div>
 <div class="dash-grid"><section class="panel"><div class="panel-head"><h3>신규 견적요청</h3><a href="quote.html">전체보기</a></div><div class="job-row"><div><b>화장품 단상자 50,000장</b><span>금박 · 톰슨 · 접착 / Bắc Ninh</span></div><strong>마감 D-2</strong></div><div class="job-row"><div><b>식품 포장 슬리브 30,000장</b><span>라미네이팅 · UV / Hà Nội</span></div><strong>마감 D-3</strong></div><div class="job-row"><div><b>라벨 후가공 100,000장</b><span>도무송 · 검수 / Hưng Yên</span></div><strong>마감 D-5</strong></div></section>
 <section class="panel"><div class="panel-head"><h3>작업 진행</h3></div><div class="progress-job"><div><b>OTQ-260827-018</b><span>라미네이팅 + 금박</span></div><div class="progress"><i style="width:72%"></i></div><small>생산 중 · 예상 완료 8/29</small></div><div class="progress-job"><div><b>OTQ-260826-011</b><span>톰슨 + 접착</span></div><div class="progress"><i style="width:45%"></i></div><small>원자재 입고 · 예상 완료 8/31</small></div></section></div>
-<section class="section"><div class="container"><div class="demo-panel"><h2>실제 플랫폼 기능 데모</h2><p class="demo-muted">회원 역할부터 RFQ, 견적 제출, 비교, 거래상태, 관리자 승인까지 연결된 데모입니다.</p><div class="demo-actions"><a class="demo-btn" href="account.html">기능 데모 시작</a><a class="demo-btn secondary" href="rfq-create.html">견적 등록</a><a class="demo-btn secondary" href="admin-approval.html">관리자 승인</a></div></div></div></section></main><script src="assets/app.js?v=34"></script></body></html>
+<section class="section"><div class="container"><div class="demo-panel"><h2>실제 플랫폼 기능 데모</h2><p class="demo-muted">회원 역할부터 RFQ, 견적 제출, 비교, 거래상태, 관리자 승인까지 연결된 데모입니다.</p><div class="demo-actions"><a class="demo-btn" href="account.html">기능 데모 시작</a><a class="demo-btn secondary" href="rfq-create.html">견적 등록</a><a class="demo-btn secondary" href="admin-approval.html">관리자 승인</a></div></div></div></section>
+<section class="section">
+  <div class="container">
+    <div class="demo-panel admin-entry-panel">
+      <div>
+        <span class="eyebrow">ADMINISTRATION</span>
+        <h2>관리자 공급업체 승인</h2>
+        <p class="demo-muted">신규 공급업체의 사업자 정보, 설비, 생산능력, 현장 확인 여부를 검토하고 승인합니다.</p>
+      </div>
+      <div class="demo-actions">
+        <a class="demo-btn dark" href="admin-approval.html">공급업체 승인 페이지</a>
+        <a class="demo-btn secondary" href="admin.html">관리자 대시보드</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main><script src="assets/app.js?v=41"></script></body></html>

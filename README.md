@@ -1,20 +1,15 @@
-# OTQ V4 Functional Demo
+# OTQ V4.1 Login/Admin Fixed
 
-기존 디자인 데모 V3.4를 기반으로 실제 플랫폼 기능 흐름을 추가했습니다.
+수정사항:
+- 전체 페이지 상단 우측에 로그인 / 회원가입 버튼 추가
+- 로그인 → account.html
+- 회원가입 → account.html#signup
+- 회원가입 입력 데모 섹션 추가
+- dashboard.html에 관리자 공급업체 승인 진입 카드 추가
+- admin.html에 공급업체 승인 페이지 링크 추가
+- index.html footer에 공급업체 승인 링크 추가
+- admin-approval.html 유지
+- 캐시 방지 버전 v=41 적용
 
-## 추가된 기능 데모
-1. 회원가입/로그인 + 고객사/공급업체 역할 구분 (`account.html`)
-2. 실제 견적요청 등록 (`rfq-create.html`)
-3. 견적요청 관리 (`rfq-management.html`)
-4. 공급업체 견적 제출 (`supplier-quote.html`)
-5. 견적 비교 및 업체 선택 (`quote-compare.html`)
-6. 거래상태 관리 (`transaction.html`)
-7. 관리자 공급업체 승인 (`admin-approval.html`)
-
-## 중요
-현재 버전은 GitHub Pages에서 테스트 가능한 프론트엔드 기능 데모입니다.
-입력한 RFQ/견적 일부는 브라우저 localStorage에 저장됩니다.
-실제 회원 DB, 서버 로그인, 파일 저장, 결제, 채팅, 알림, 권한보안은 백엔드 연결 단계에서 구현해야 합니다.
-
-## GitHub
-압축을 풀고 전체 파일과 assets 폴더를 기존 onlineservice Repository에 업로드 후 Commit changes 하세요.
+GitHub:
+압축 해제 후 전체 파일과 assets 폴더를 기존 저장소에 업로드하고 Commit changes 하세요.
