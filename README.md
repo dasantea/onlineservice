@@ -1,33 +1,29 @@
-# OTQ Platform MVP
 
-GitHub Pages에서 바로 테스트할 수 있는 정적 HTML/CSS/JavaScript 데모입니다.
+# OTQ Platform V2
 
-## 포함 페이지
-- index.html : 메인
+GitHub Pages용 2차 상용화 디자인 데모입니다.
+
+## 주요 화면
+- index.html : 메인 상용화 디자인
 - quote.html : 외주 견적요청
-- suppliers.html : 가공업체 찾기
-- equipment.html : 중고설비
-- logistics.html : 물류 견적
+- suppliers.html : 가공업체 리스트
+- supplier-detail.html : 업체 상세
+- quote-compare.html : 견적 비교
+- equipment.html : 중고설비 리스트
+- equipment-detail.html : 설비 상세 / 총 도입비용
+- logistics.html : 공정물류 견적
 - partner.html : 업체 입점
-- dashboard.html : 업체/고객 대시보드 데모
+- dashboard.html : 사용자/업체 대시보드
+- admin.html : 관리자 데모
 
-## GitHub Pages 배포
-1. 새 GitHub Repository 생성
-2. 이 폴더의 모든 파일과 assets 폴더 업로드
-3. Repository > Settings > Pages
-4. Build and deployment에서 `Deploy from a branch`
-5. Branch `main`, Folder `/ (root)` 선택
-6. Save
-7. 생성된 Pages URL 접속
+## 기존 GitHub에 업데이트하는 방법
+1. ZIP 압축을 풉니다.
+2. 기존 GitHub Repository `onlineservice`로 이동합니다.
+3. Add file > Upload files
+4. 이 폴더 안의 파일 전체 + assets 폴더를 드래그합니다.
+5. 같은 이름의 기존 파일은 새 버전으로 덮어씁니다.
+6. Commit changes
+7. GitHub Pages가 자동 재배포됩니다.
 
-## 주의
-현재 버전은 UI/UX 테스트용 프론트엔드 MVP입니다.
-- 실제 로그인
-- DB 저장
-- 견적 전송
-- 파일 업로드 저장
-- 채팅
-- 결제
-- 관리자 권한
-- 실제 영상 업로드/스트리밍
-기능은 아직 연결되지 않았습니다.
+현재는 프론트엔드 UI/UX 데모입니다.
+실제 회원가입, DB, 파일저장, 채팅, 결제, 알림, 권한관리 기능은 다음 단계에서 백엔드를 연결해야 합니다.
