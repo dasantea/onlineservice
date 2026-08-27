@@ -1,20 +1,17 @@
-# OTQ Platform V3 — 4 Languages
+# OTQ Platform V3.1 Fixed
 
-지원 언어:
-- 한국어
-- Tiếng Việt
-- 中文（简体）
-- English
+수정사항:
+- 상단 언어선택 버튼 항상 표시
+- 언어선택: 한국어 / Tiếng Việt / 中文 / English
+- 메인 헤드라인을 한 줄로 변경
+  - `인쇄 후공정 외주를 찾고 비교하고 맡기세요.`
+- 중간점(·) 제거
+- 데스크톱 헤더 레이아웃 안정화
+- 우측 LIVE MARKET 카드 겹침 일부 조정
 
-상단 메뉴의 🌐 언어 선택 버튼으로 전환합니다.
-선택한 언어는 브라우저 localStorage에 저장되어 다른 페이지로 이동해도 유지됩니다.
-
-## GitHub 업데이트
+## GitHub 반영
 1. ZIP 압축 해제
-2. GitHub `onlineservice` 저장소 → Add file → Upload files
-3. 이 폴더의 모든 HTML 파일과 `assets` 폴더를 업로드
-4. 동일 파일은 새 버전으로 교체
-5. Commit changes
-6. GitHub Pages 자동 재배포
-
-주의: 현재는 프론트엔드 데모이며, 언어별 DB 콘텐츠/관리자 번역 입력 기능은 실제 백엔드 개발 단계에서 추가해야 합니다.
+2. 기존 onlineservice Repository → Add file → Upload files
+3. 전체 파일 + assets 폴더 업로드
+4. Commit changes
+5. 1~2분 뒤 Ctrl+F5 새로고침

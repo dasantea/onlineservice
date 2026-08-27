@@ -59,3 +59,115 @@ linear-gradient(180deg,#fbfefd 0%,#f4faf8 100%)}
 .lang-menu button{display:block;width:100%;border:0;background:#fff;text-align:left;padding:10px 11px;border-radius:8px;font-size:12px;cursor:pointer;color:#344054}
 .lang-menu button:hover{background:#f2f7f5;color:var(--brand)}
 @media(max-width:900px){.language-switcher{margin-left:auto;margin-right:4px}.lang-current{padding:8px 9px}}
+
+
+/* ===== V3.1 HEADER + HERO FIX ===== */
+
+/* Make header layout stable */
+.nav-wrap{
+  display:grid !important;
+  grid-template-columns:auto 1fr auto auto;
+  align-items:center;
+  gap:18px;
+}
+.brand{min-width:180px}
+.main-nav{
+  justify-content:flex-end;
+  min-width:0;
+}
+.language-switcher{
+  display:block !important;
+  position:relative !important;
+  margin:0 !important;
+  order:initial !important;
+  z-index:120 !important;
+}
+.lang-current{
+  display:inline-flex !important;
+  align-items:center;
+  gap:6px;
+  min-width:104px;
+  justify-content:center;
+  background:#fff !important;
+  border:1px solid #d7dde3 !important;
+  color:#253140 !important;
+  box-shadow:0 2px 8px rgba(16,24,40,.04);
+}
+.lang-menu{
+  right:0 !important;
+  left:auto !important;
+  top:42px !important;
+}
+
+/* Headline: one line on desktop */
+.hero-copy-block{
+  min-width:0;
+}
+.hero-title-single{
+  font-size:50px !important;
+  line-height:1.12 !important;
+  letter-spacing:-2.6px !important;
+  white-space:nowrap;
+  margin:0 0 22px !important;
+  color:var(--ink);
+}
+.hero-title-single::first-line{
+  color:var(--ink);
+}
+
+/* slightly widen the text side on wide screens */
+.hero-grid-v2{
+  grid-template-columns:1.12fr .88fr !important;
+  gap:52px !important;
+}
+
+/* keep hero cards from colliding */
+.factory-card.floating.three{
+  top:265px !important;
+  right:26px !important;
+}
+
+@media(max-width:1180px){
+  .hero-title-single{
+    font-size:44px !important;
+    letter-spacing:-2.2px !important;
+  }
+  .main-nav{gap:18px !important}
+}
+
+@media(max-width:1020px){
+  .nav-wrap{
+    grid-template-columns:auto 1fr auto auto;
+  }
+  .hero-title-single{
+    white-space:normal;
+    font-size:42px !important;
+  }
+}
+
+@media(max-width:900px){
+  .nav-wrap{
+    display:flex !important;
+    gap:10px;
+  }
+  .brand{min-width:auto}
+  .language-switcher{
+    margin-left:auto !important;
+  }
+  .hero-title-single{
+    white-space:normal;
+    font-size:40px !important;
+  }
+}
+
+@media(max-width:620px){
+  .lang-current{
+    min-width:auto;
+    padding:8px 9px !important;
+  }
+  .hero-title-single{
+    font-size:36px !important;
+    line-height:1.15 !important;
+    letter-spacing:-1.7px !important;
+  }
+}
