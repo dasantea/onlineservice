@@ -5,7 +5,170 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>인쇄·후공정 외주 플랫폼 | OTQ</title>
 <meta name="description" content="인쇄·후공정 외주, 물류, 중고설비를 한 곳에서 연결하는 B2B 제조 플랫폼 OTQ">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=34">
+
+<style id="v34-live-market-fix">
+/* V3.4 live market hard override */
+.hero-grid-v2{
+  display:grid !important;
+  grid-template-columns:minmax(0,1.18fr) minmax(430px,.82fr) !important;
+  gap:52px !important;
+  align-items:start !important;
+}
+.hero-copy-block{
+  position:relative !important;
+  z-index:2 !important;
+}
+.hero-title-single{
+  font-size:44px !important;
+  line-height:1.16 !important;
+  letter-spacing:-2.5px !important;
+  white-space:nowrap !important;
+  margin:0 0 24px !important;
+}
+.hero-visual-lowered{
+  min-height:560px !important;
+  padding-top:145px !important;
+  box-sizing:border-box !important;
+  position:relative !important;
+  z-index:1 !important;
+}
+.live-market-board{
+  width:100% !important;
+  min-height:390px !important;
+  box-sizing:border-box !important;
+  background:linear-gradient(145deg,#0b2730 0%,#075f5b 100%) !important;
+  border-radius:28px !important;
+  padding:26px !important;
+  box-shadow:0 28px 70px rgba(15,118,110,.18) !important;
+  position:relative !important;
+  overflow:hidden !important;
+}
+.live-market-board:before{
+  content:"" !important;
+  position:absolute !important;
+  width:340px !important;
+  height:340px !important;
+  border:1px solid rgba(255,255,255,.08) !important;
+  border-radius:50% !important;
+  right:-120px !important;
+  top:-140px !important;
+}
+.live-market-title{
+  position:relative !important;
+  z-index:2 !important;
+  display:flex !important;
+  align-items:baseline !important;
+  gap:10px !important;
+  margin-bottom:20px !important;
+}
+.live-market-title span{
+  color:#4be1d1 !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  letter-spacing:1.4px !important;
+}
+.live-market-title b{
+  color:#fff !important;
+  font-size:21px !important;
+  font-weight:850 !important;
+}
+.live-market-cards{
+  position:relative !important;
+  z-index:2 !important;
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:12px !important;
+}
+.live-mini-card{
+  background:#fff !important;
+  border-radius:16px !important;
+  padding:17px 18px !important;
+  min-height:108px !important;
+  box-sizing:border-box !important;
+  color:#101828 !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.08) !important;
+  display:block !important;
+}
+.live-mini-wide{
+  grid-column:1 / -1 !important;
+}
+.live-mini-card small{
+  display:block !important;
+  color:#00877b !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:.4px !important;
+  margin-bottom:7px !important;
+}
+.live-mini-card strong{
+  display:block !important;
+  color:#101828 !important;
+  font-size:16px !important;
+  line-height:1.35 !important;
+  margin-bottom:5px !important;
+}
+.live-mini-wide strong{
+  font-size:19px !important;
+}
+.live-mini-card p{
+  margin:0 !important;
+  color:#667085 !important;
+  font-size:12px !important;
+  line-height:1.4 !important;
+}
+.live-mini-meta{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  margin-top:10px !important;
+}
+.live-mini-meta span{
+  color:#667085 !important;
+  font-size:12px !important;
+}
+.live-mini-meta b{
+  color:#00877b !important;
+  font-size:12px !important;
+}
+
+/* kill old board/card rules in this hero */
+.hero-visual-lowered .market-board,
+.hero-visual-lowered .market-grid,
+.hero-visual-lowered .market-card,
+.hero-visual-lowered .factory-scene,
+.hero-visual-lowered .factory-card{
+  display:none !important;
+}
+
+@media(max-width:1180px){
+  .hero-title-single{
+    white-space:normal !important;
+    font-size:40px !important;
+  }
+}
+@media(max-width:1080px){
+  .hero-grid-v2{
+    grid-template-columns:1fr !important;
+  }
+  .hero-visual-lowered{
+    padding-top:30px !important;
+    min-height:auto !important;
+  }
+}
+@media(max-width:620px){
+  .hero-title-single{
+    font-size:34px !important;
+  }
+  .live-market-cards{
+    grid-template-columns:1fr !important;
+  }
+  .live-mini-wide{
+    grid-column:auto !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="site-header">
@@ -51,33 +214,40 @@
       </div>
     </div>
 
-    <div class="hero-visual">
-      <div class="market-board">
-        <div class="market-board-head">
-          <div><span>LIVE MARKET</span><b>오늘의 거래 현황</b></div>
-          <em>OTQ NETWORK</em>
+    <div class="hero-visual hero-visual-lowered">
+      <div class="live-market-board">
+        <div class="live-market-title">
+          <span>LIVE MARKET</span>
+          <b>오늘의 거래 현황</b>
         </div>
-        <div class="market-grid">
-          <div class="market-card market-card-main">
+
+        <div class="live-market-cards">
+          <div class="live-mini-card live-mini-wide">
             <small>신규 외주요청</small>
-            <b>화장품 단상자 50,000장</b>
-            <span>금박 · 톰슨 · 접착</span>
-            <div class="market-meta"><em>Bắc Ninh</em><strong>견적 6건</strong></div>
+            <strong>화장품 단상자 50,000장</strong>
+            <p>금박 · 톰슨 · 접착</p>
+            <div class="live-mini-meta">
+              <span>Bắc Ninh</span>
+              <b>견적 6건</b>
+            </div>
           </div>
-          <div class="market-card">
+
+          <div class="live-mini-card">
             <small>추천 업체</small>
-            <b>Vina Print Finishing</b>
-            <span>★ 4.9 · 거래 186건</span>
+            <strong>Vina Print Finishing</strong>
+            <p>★ 4.9 · 거래 186건</p>
           </div>
-          <div class="market-card">
+
+          <div class="live-mini-card">
             <small>물류</small>
-            <b>1톤 트럭 매칭</b>
-            <span>픽업 14:00 · Bắc Ninh</span>
+            <strong>1톤 트럭 매칭</strong>
+            <p>픽업 14:00 · Bắc Ninh</p>
           </div>
-          <div class="market-card">
+
+          <div class="live-mini-card live-mini-wide">
             <small>중고설비</small>
-            <b>KBA Rapida 105</b>
-            <span>$80,000 · Hanoi</span>
+            <strong>KBA Rapida 105</strong>
+            <p>$80,000 · Hanoi</p>
           </div>
         </div>
       </div>
@@ -180,5 +350,5 @@
     <div><b>파트너</b><a href="partner.html">업체 입점</a><a href="dashboard.html">대시보드</a><a href="admin.html">관리자</a></div>
   </div>
 </footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=34"></script>
 </body></html>
