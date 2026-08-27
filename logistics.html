@@ -1,10 +1,11 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>물류 | OTQ</title><link rel="stylesheet" href="assets/style.css"></head>
-<body><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a>
+<body><header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a>
+    <nav class="main-nav"><a href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a class="active" href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta" href="dashboard.html">대시보드</a></nav>
     <div class="language-switcher">
       <button class="lang-current" type="button" aria-label="Select language">
-        <span class="lang-globe">🌐</span>
-        <span id="currentLangLabel">한국어</span>
-        <span class="lang-arrow">▾</span>
+        <span class="lang-globe">🌐</span><span id="currentLangLabel">한국어</span><span class="lang-arrow">▾</span>
       </button>
       <div class="lang-menu" role="menu">
         <button type="button" data-lang="ko">한국어</button>
@@ -13,8 +14,9 @@
         <button type="button" data-lang="en">English</button>
       </div>
     </div>
-    
-    <button class="mobile-toggle">☰</button><nav class="main-nav"><a href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a class="active" href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta" href="dashboard.html">대시보드</a></nav></div></header>
+    <button class="mobile-toggle" aria-label="메뉴 열기">☰</button>
+  </div>
+</header>
 <main class="sub-main"><section class="sub-hero"><div class="container narrow"><span class="eyebrow">B2B LOGISTICS</span><h1>공정 물류 견적</h1><p>원자재 픽업, 공정 간 이동, 완제품 납품, 설비 운송을 한 번에 요청하세요.</p></div></section>
 <section class="section"><div class="container narrow"><form class="form-card" onsubmit="return demoSubmit(event,'물류 견적 요청이 접수되었습니다. 데모 버전입니다.')">
 <div class="form-section"><h3>운송 구간</h3><div class="form-grid"><label>출발지<input required placeholder="예: Bắc Ninh"></label><label>도착지<input required placeholder="예: Hà Nội"></label><label>픽업 날짜<input type="date"></label><label>희망 시간<input type="time"></label></div></div>
