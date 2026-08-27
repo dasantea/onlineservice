@@ -1,41 +1,36 @@
-# OTQ V5 Full i18n
+# OTQ V6 Professional Full i18n
 
-전체 페이지 다국어 점검 및 언어 시스템 재구성 버전입니다.
+실제 공개 사이트의 메인 및 하부 페이지 구조를 확인한 뒤 다국어를 다시 구성한 버전입니다.
 
-지원 언어 / 언어 버튼:
-- 🇰🇷 한국어
-- 🇻🇳 Tiếng Việt
-- 🇨🇳 中文
-- 🇺🇸 English
-
-적용:
-- 메인 페이지 및 모든 하부 페이지
-- 페이지 제목(title)
-- 메뉴/버튼/표/설명문/폼 라벨
-- placeholder
-- 동적으로 생성되는 RFQ/견적 데모 텍스트
-- alert/toast 데모 메시지
-- 선택 언어는 localStorage에 저장되어 페이지 이동 후에도 유지
-
-폰트:
+언어 및 폰트
+- 한국어: 기존 폰트
 - 베트남어: Times New Roman
-- 중국어: Yu Gothic UI Light (설치되지 않은 환경에서는 Yu Gothic UI / Microsoft YaHei UI 순으로 fallback)
-- 영어: Inter / Arial
-- 한국어: 기존 사이트 폰트
+- 중국어: SimSun (宋体)
+- 영어: Times New Roman
 
-언어 선택 버튼:
-- 흰색 박스
-- 지구본 제거
-- 각 언어별 국기 표시
+언어 선택 버튼
+- 모든 페이지 흰색 버튼으로 강제 통일
+- 글자 약어(KR/VN/CN/US)와 지구본 사용 안 함
+- 실제 SVG 국기 이미지 적용
+  - 대한민국 / 베트남 / 중국 / 미국
+- 선택 언어는 localStorage에 저장되어 하부 페이지 이동 후 유지
 
-정적 화면 번역 잔여 검사:
-- Vietnamese residual Korean strings: 0
-- Chinese residual Korean strings: 0
-- English residual Korean strings: 0
+전문 인쇄/후공정 용어 예시
+- gia công sau in / ép kim / bế khuôn / dán hộp / phủ UV
+- 印后加工 / 烫金 / 模切 / 糊盒 / UV上光 / 质检
+- print finishing / foil stamping / die cutting / folder gluing / UV coating
 
-GitHub 업로드:
+전체 정적 페이지: 17개
+추출한 한국어 UI 문구: 419개
+번역 후 남은 한국어 검사:
+- Vietnamese: 0
+- Chinese: 0
+- English: 0
+
+GitHub 업로드
 1. ZIP 압축 해제
-2. onlineservice Repository > Add file > Upload files
-3. 전체 파일 및 assets 폴더 업로드
-4. Commit changes
-5. 새로고침 (캐시 버전 v=50)
+2. 기존 onlineservice Repository > Add file > Upload files
+3. HTML 전체 + assets 폴더 전체 업로드
+4. 특히 assets/flags 폴더까지 반드시 업로드
+5. Commit changes
+6. 캐시 버전 v=60 적용

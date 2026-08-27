@@ -1,5 +1,5 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>견적 요청 관리 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=50"></head><body>
+<title>견적 요청 관리 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=60"></head><body>
 <header class="site-header"><div class="container nav-wrap">
 <a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a>
 <nav class="main-nav"><a href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta" href="dashboard.html">대시보드</a></nav>
@@ -10,18 +10,18 @@
     </div>
     
     <div class="language-switcher" data-no-i18n>
-      <button class="lang-current" type="button" aria-label="Select language">
-        <span id="currentLangFlag" class="lang-flag">🇰🇷</span>
-        <span id="currentLangLabel">한국어</span>
-        <span class="lang-arrow">▾</span>
-      </button>
-      <div class="lang-menu" role="menu">
-        <button type="button" data-lang="ko"><span>🇰🇷</span> 한국어</button>
-        <button type="button" data-lang="vi"><span>🇻🇳</span> Tiếng Việt</button>
-        <button type="button" data-lang="zh"><span>🇨🇳</span> 中文</button>
-        <button type="button" data-lang="en"><span>🇺🇸</span> English</button>
-      </div>
-    </div>
+  <button class="lang-current" type="button" aria-label="Select language">
+    <img id="currentLangFlag" class="lang-flag-img" src="assets/flags/kr.svg" alt="">
+    <span id="currentLangLabel">한국어</span>
+    <span class="lang-arrow">▾</span>
+  </button>
+  <div class="lang-menu" role="menu">
+    <button type="button" data-lang="ko"><img src="assets/flags/kr.svg" alt=""> 한국어</button>
+    <button type="button" data-lang="vi"><img src="assets/flags/vn.svg" alt=""> Tiếng Việt</button>
+    <button type="button" data-lang="zh"><img src="assets/flags/cn.svg" alt=""> 中文</button>
+    <button type="button" data-lang="en"><img src="assets/flags/us.svg" alt=""> English</button>
+  </div>
+</div>
 <button class="mobile-toggle">☰</button></div></header>
 <main class="demo-shell"><div class="container demo-grid"><aside class="demo-side"><b style="display:block;padding:8px 12px 12px">실제 플랫폼 기능 데모</b><a class="" href="account.html">회원가입 / 로그인</a>
 <a class="" href="rfq-create.html">견적 등록</a>
@@ -37,4 +37,4 @@
 </tbody></table><div class="demo-actions"><a class="demo-btn" href="rfq-create.html">새 견적 등록</a><a class="demo-btn secondary" href="quote-compare.html">견적 비교</a></div></div>
 <script>document.addEventListener('DOMContentLoaded',()=>{const s=OTQDemo.getState(),b=document.getElementById('rfqRows');s.rfqs.forEach(r=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${r.id}</td><td>${r.product} ${r.qty}</td><td>${r.process}</td><td>0건</td><td><span class="demo-badge green">${r.status}</span></td>`;b.prepend(tr)})});</script>
 </section></div></main>
-<script src="assets/app.js?v=50"></script></body></html>
+<script src="assets/app.js?v=60"></script></body></html>

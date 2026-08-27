@@ -660,3 +660,47 @@ html[lang="zh-CN"] .hero-title-single{
 @media(max-width:900px){
   .lang-current{height:42px!important;min-width:105px!important}
 }
+
+/* ===== V6 PROFESSIONAL I18N FINAL OVERRIDES ===== */
+body .language-switcher{position:relative!important;display:block!important;z-index:5000!important;flex:0 0 auto!important;margin:0!important}
+body .lang-current{
+  appearance:none!important;border:0!important;outline:0!important;
+  background:#fff!important;color:#253140!important;
+  min-width:126px!important;height:48px!important;padding:0 14px!important;
+  border-radius:11px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;
+  box-shadow:0 3px 16px rgba(16,24,40,.10)!important;font-size:13px!important;font-weight:800!important;cursor:pointer!important
+}
+body .lang-current:hover{background:#f8faf9!important}
+.lang-flag-img,.lang-menu img{width:25px!important;height:17px!important;object-fit:cover!important;border-radius:2px!important;box-shadow:0 0 0 1px rgba(16,24,40,.08)!important;flex:0 0 auto!important}
+body .lang-arrow{font-size:10px!important;color:#667085!important}
+body .lang-menu{
+ display:none!important;position:absolute!important;right:0!important;left:auto!important;top:55px!important;width:174px!important;
+ background:#fff!important;border:0!important;border-radius:12px!important;padding:7px!important;box-shadow:0 20px 48px rgba(16,24,40,.16)!important;z-index:5500!important
+}
+body .language-switcher.open .lang-menu{display:block!important}
+body .lang-menu button{
+ display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;padding:10px 11px!important;border:0!important;
+ border-radius:8px!important;background:#fff!important;color:#253140!important;text-align:left!important;font-size:13px!important;font-weight:650!important;cursor:pointer!important
+}
+body .lang-menu button:hover{background:#f2f7f5!important;color:#007f75!important}
+
+/* Required language fonts */
+html[lang="vi"] body,html[lang="vi"] button,html[lang="vi"] input,html[lang="vi"] select,html[lang="vi"] textarea{
+ font-family:"Times New Roman",Times,serif!important
+}
+html[lang="zh-CN"] body,html[lang="zh-CN"] button,html[lang="zh-CN"] input,html[lang="zh-CN"] select,html[lang="zh-CN"] textarea{
+ font-family:SimSun,"宋体",serif!important
+}
+html[lang="en"] body,html[lang="en"] button,html[lang="en"] input,html[lang="en"] select,html[lang="en"] textarea{
+ font-family:"Times New Roman",Times,serif!important
+}
+
+/* Longer localized navigation/copy */
+html[lang="vi"] .main-nav,html[lang="en"] .main-nav{gap:14px!important}
+html[lang="vi"] .main-nav a,html[lang="en"] .main-nav a{font-size:13px!important;line-height:1.18!important}
+html[lang="zh-CN"] .main-nav{gap:18px!important}
+html[lang="vi"] .hero-title-single,html[lang="zh-CN"] .hero-title-single,html[lang="en"] .hero-title-single{white-space:normal!important}
+@media(max-width:1180px){
+ body .lang-current{min-width:116px!important;padding:0 11px!important}
+ html[lang="vi"] .main-nav a,html[lang="en"] .main-nav a{font-size:12px!important}
+}
