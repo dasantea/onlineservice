@@ -1,5 +1,5 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>견적 비교 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=40"></head><body>
+<title>공급업체 견적 제출 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=40"></head><body>
 <header class="site-header"><div class="container nav-wrap">
 <a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a>
 <nav class="main-nav"><a href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta" href="dashboard.html">대시보드</a></nav>
@@ -8,15 +8,19 @@
 <main class="demo-shell"><div class="container demo-grid"><aside class="demo-side"><b style="display:block;padding:8px 12px 12px">실제 플랫폼 기능 데모</b><a class="" href="account.html">회원가입 / 로그인</a>
 <a class="" href="rfq-create.html">견적 등록</a>
 <a class="" href="rfq-management.html">견적 요청 관리</a>
-<a class="" href="supplier-quote.html">공급업체 견적 제출</a>
-<a class="active" href="quote-compare.html">견적 비교</a>
+<a class="active" href="supplier-quote.html">공급업체 견적 제출</a>
+<a class="" href="quote-compare.html">견적 비교</a>
 <a class="" href="transaction.html">거래상태 관리</a>
 <a class="" href="admin-approval.html">관리자 승인</a></aside><section>
-<div class="demo-panel"><h1>견적 비교</h1><p class="demo-muted">가공비뿐 아니라 물류비, 납기, 평점까지 비교해 발주할 업체를 선택합니다.</p>
-<div class="demo-compare">
-<div class="demo-quote-card recommended"><strong>Vina Print Finishing</strong><div class="price">19.7M VND</div><p>가공 18.5M + 물류 1.2M</p><p>납기 5일 · ★ 4.9</p><button class="demo-btn" onclick="OTQDemo.toast('Vina Print Finishing을 선택했습니다.')">업체 선택</button></div>
-<div class="demo-quote-card"><strong>Hanoi Pack</strong><div class="price">18.9M VND</div><p>가공 18.0M + 물류 0.9M</p><p>납기 7일 · ★ 4.7</p><button class="demo-btn secondary" onclick="OTQDemo.toast('Hanoi Pack을 선택했습니다.')">업체 선택</button></div>
-<div class="demo-quote-card"><strong>Bac Ninh Finish</strong><div class="price">20.1M VND</div><p>가공 19.3M + 물류 0.8M</p><p>납기 4일 · ★ 4.8</p><button class="demo-btn secondary" onclick="OTQDemo.toast('Bac Ninh Finish를 선택했습니다.')">업체 선택</button></div>
-</div></div>
+<div class="demo-panel"><h1>공급업체 견적 제출</h1><p class="demo-muted">공급업체가 고객 RFQ를 확인한 후 가공비, 물류비, 납기를 제출하는 화면입니다.</p>
+<form data-demo-quote><div class="demo-form">
+<div class="demo-field"><label>대상 RFQ</label><select name="rfq"><option>RFQ-240827 · 화장품 단상자 50,000장</option></select></div>
+<div class="demo-field"><label>공급업체</label><input name="supplier" value="Vina Print Finishing"></div>
+<div class="demo-field"><label>가공비 (VND)</label><input name="processing" type="number" value="18500000"></div>
+<div class="demo-field"><label>물류비 (VND)</label><input name="logistics" type="number" value="1200000"></div>
+<div class="demo-field"><label>납기 (일)</label><input name="days" type="number" value="5"></div>
+<div class="demo-field"><label>견적 유효기간</label><input type="date"></div>
+<div class="demo-field full"><label>공급업체 메모</label><textarea>자재 입고 후 5일. 샘플 승인 포함.</textarea></div>
+</div><div class="demo-actions"><button class="demo-btn" type="submit">견적 제출</button></div></form></div>
 </section></div></main>
 <script src="assets/app.js?v=40"></script></body></html>

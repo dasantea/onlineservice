@@ -123,3 +123,45 @@ if(location.pathname.endsWith('quote.html') && params.get('type')){
 }
 
 document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+
+/* ===== V4 FUNCTIONAL DEMO LOGIC ===== */
+const OTQDemo = {
+  getState(){
+    return JSON.parse(localStorage.getItem('otq_demo_state') || '{"role":"customer","rfqs":[],"quotes":[],"transactions":[],"approvedSuppliers":12}');
+  },
+  save(s){ localStorage.setItem('otq_demo_state', JSON.stringify(s)); },
+  toast(msg){
+    const old=document.querySelector('.demo-toast'); if(old) old.remove();
+    const el=document.createElement('div'); el.className='demo-toast'; el.textContent=msg;
+    document.body.appendChild(el); setTimeout(()=>el.remove(),2200);
+  },
+  setRole(role){
+    const s=this.getState(); s.role=role; this.save(s);
+    document.querySelectorAll('[data-role-card]').forEach(x=>x.classList.toggle('selected',x.dataset.roleCard===role));
+    this.toast(role==='customer'?'고객 계정으로 설정되었습니다.':'공급업체 계정으로 설정되었습니다.');
+  },
+  createRFQ(form){
+    const fd=new FormData(form), s=this.getState();
+    const rfq={id:'RFQ-'+String(Date.now()).slice(-6),product:fd.get('product'),qty:fd.get('qty'),process:fd.get('process'),delivery:fd.get('delivery'),status:'견적 접수중',created:new Date().toLocaleDateString()};
+    s.rfqs.unshift(rfq); this.save(s); this.toast('견적요청이 등록되었습니다: '+rfq.id);
+    setTimeout(()=>location.href='rfq-management.html',700);
+  },
+  submitQuote(form){
+    const fd=new FormData(form), s=this.getState();
+    const q={id:'QT-'+String(Date.now()).slice(-6),rfq:fd.get('rfq'),supplier:fd.get('supplier'),processing:Number(fd.get('processing')||0),logistics:Number(fd.get('logistics')||0),days:Number(fd.get('days')||0),status:'제출완료'};
+    q.total=q.processing+q.logistics; s.quotes.unshift(q); this.save(s); this.toast('공급업체 견적이 제출되었습니다.');
+    form.reset();
+  },
+  approveSupplier(){
+    const s=this.getState(); s.approvedSuppliers+=1; this.save(s);
+    this.toast('공급업체를 승인했습니다.');
+    const el=document.getElementById('pendingSupplier'); if(el) el.remove();
+  }
+};
+document.addEventListener('DOMContentLoaded',()=>{
+  const s=OTQDemo.getState();
+  document.querySelectorAll('[data-role-card]').forEach(x=>x.classList.toggle('selected',x.dataset.roleCard===s.role));
+  document.querySelectorAll('[data-role-card]').forEach(x=>x.addEventListener('click',()=>OTQDemo.setRole(x.dataset.roleCard)));
+  document.querySelectorAll('[data-demo-rfq]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();OTQDemo.createRFQ(f)}));
+  document.querySelectorAll('[data-demo-quote]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();OTQDemo.submitQuote(f)}));
+});

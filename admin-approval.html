@@ -1,5 +1,5 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>견적 비교 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=40"></head><body>
+<title>관리자 승인 | OTQ</title><link rel="stylesheet" href="assets/style.css?v=40"></head><body>
 <header class="site-header"><div class="container nav-wrap">
 <a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a>
 <nav class="main-nav"><a href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta" href="dashboard.html">대시보드</a></nav>
@@ -9,14 +9,14 @@
 <a class="" href="rfq-create.html">견적 등록</a>
 <a class="" href="rfq-management.html">견적 요청 관리</a>
 <a class="" href="supplier-quote.html">공급업체 견적 제출</a>
-<a class="active" href="quote-compare.html">견적 비교</a>
+<a class="" href="quote-compare.html">견적 비교</a>
 <a class="" href="transaction.html">거래상태 관리</a>
-<a class="" href="admin-approval.html">관리자 승인</a></aside><section>
-<div class="demo-panel"><h1>견적 비교</h1><p class="demo-muted">가공비뿐 아니라 물류비, 납기, 평점까지 비교해 발주할 업체를 선택합니다.</p>
-<div class="demo-compare">
-<div class="demo-quote-card recommended"><strong>Vina Print Finishing</strong><div class="price">19.7M VND</div><p>가공 18.5M + 물류 1.2M</p><p>납기 5일 · ★ 4.9</p><button class="demo-btn" onclick="OTQDemo.toast('Vina Print Finishing을 선택했습니다.')">업체 선택</button></div>
-<div class="demo-quote-card"><strong>Hanoi Pack</strong><div class="price">18.9M VND</div><p>가공 18.0M + 물류 0.9M</p><p>납기 7일 · ★ 4.7</p><button class="demo-btn secondary" onclick="OTQDemo.toast('Hanoi Pack을 선택했습니다.')">업체 선택</button></div>
-<div class="demo-quote-card"><strong>Bac Ninh Finish</strong><div class="price">20.1M VND</div><p>가공 19.3M + 물류 0.8M</p><p>납기 4일 · ★ 4.8</p><button class="demo-btn secondary" onclick="OTQDemo.toast('Bac Ninh Finish를 선택했습니다.')">업체 선택</button></div>
-</div></div>
+<a class="active" href="admin-approval.html">관리자 승인</a></aside><section>
+<div class="demo-kpis"><div class="demo-kpi"><b>13</b><span>승인 대기 업체</span></div><div class="demo-kpi"><b>27</b><span>오늘 RFQ</span></div><div class="demo-kpi"><b>42</b><span>진행 거래</span></div><div class="demo-kpi"><b>1.28B</b><span>월 GMV (VND)</span></div></div>
+<div class="demo-panel"><h1>공급업체 승인</h1><p class="demo-muted">사업자 정보, 설비, 생산능력, 현장확인 상태를 검토한 뒤 플랫폼 노출을 승인합니다.</p>
+<table class="demo-table"><thead><tr><th>업체</th><th>지역</th><th>주요 공정</th><th>검증</th><th>조치</th></tr></thead><tbody>
+<tr id="pendingSupplier"><td><b>Viet Finish Tech</b></td><td>Bắc Ninh</td><td>금박 · 톰슨 · 접착</td><td><span class="demo-badge orange">서류 확인중</span></td><td><button class="demo-btn" onclick="OTQDemo.approveSupplier()">승인</button> <button class="demo-btn secondary">보류</button></td></tr>
+<tr><td><b>Hanoi Lamination</b></td><td>Hanoi</td><td>라미네이팅</td><td><span class="demo-badge green">현장 확인완료</span></td><td><button class="demo-btn">승인</button></td></tr>
+</tbody></table></div>
 </section></div></main>
 <script src="assets/app.js?v=40"></script></body></html>
