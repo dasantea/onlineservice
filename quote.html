@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>외주 견적요청 | OTQ</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span>OTQ</span><small>Print Manufacturing Network</small></a><button class="mobile-toggle">☰</button><nav class="main-nav"><a class="active" href="quote.html">외주 견적요청</a><a href="suppliers.html">가공업체 찾기</a><a href="equipment.html">중고설비</a><a href="logistics.html">물류</a><a href="partner.html">업체 입점</a><a class="nav-cta" href="dashboard.html">대시보드</a></nav></div></header>
+<main class="sub-main">
+<section class="sub-hero"><div class="container narrow"><span class="eyebrow">RFQ</span><h1>외주 견적 요청</h1><p>한 번의 요청으로 적합한 인쇄·후공정 업체의 견적을 비교하세요.</p></div></section>
+<section class="section"><div class="container narrow">
+<form class="form-card" onsubmit="return demoSubmit(event,'견적 요청이 접수되었습니다. 데모 버전에서는 실제 전송되지 않습니다.')">
+  <div class="form-section"><h3>1. 기본 작업정보</h3><div class="form-grid">
+    <label>제품명<input required placeholder="예: 화장품 단상자"></label>
+    <label>희망 납기<input type="date" required></label>
+    <label>규격<input placeholder="예: 300 × 450 mm"></label>
+    <label>수량<input type="number" placeholder="예: 50000"></label>
+    <label>재질<input placeholder="예: 350g Ivory"></label>
+    <label>납품지역<input placeholder="예: Bắc Ninh"></label>
+  </div></div>
+  <div class="form-section"><h3>2. 필요한 공정</h3><div class="check-grid">
+    <label><input type="checkbox"> 옵셋인쇄</label><label><input type="checkbox"> 라미네이팅</label><label><input type="checkbox"> UV 코팅</label><label><input type="checkbox"> 금박/은박</label><label><input type="checkbox"> 톰슨/도무송</label><label><input type="checkbox"> 접착/제함</label><label><input type="checkbox"> 제본</label><label><input type="checkbox"> 검수/포장</label>
+  </div></div>
+  <div class="form-section"><h3>3. 물류 포함 여부</h3><div class="radio-row"><label><input type="radio" name="logi" checked> 물류 포함 견적</label><label><input type="radio" name="logi"> 가공비만 견적</label></div></div>
+  <div class="form-section"><h3>4. 상세 요청사항</h3><textarea rows="6" placeholder="공정조건, 품질기준, 포장방법 등 필요한 내용을 입력하세요."></textarea><label class="file-box">도면/샘플/작업지시서 첨부<input type="file" multiple></label></div>
+  <button class="btn primary wide" type="submit">무료 견적 요청하기</button>
+</form></div></section></main>
+<script src="assets/app.js"></script></body></html>
